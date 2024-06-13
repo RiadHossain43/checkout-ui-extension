@@ -16,14 +16,5 @@ export default reactExtension(
 function Extension() {
   const translate = useTranslate();
   const { extension } = useApi();
-
-  const shippingAddress = useShippingAddress();
-  const customer = useCustomer();
-
-  return null
-  return (
-    <Banner title="Hurrah!! We have special discounts for you.">
-      <Button>Apply Dicount</Button>
-    </Banner>
-  );
+  return <Banner title="Apply 'CODE_X' to get a 10% discount."></Banner>;
 }

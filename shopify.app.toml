@@ -3,7 +3,7 @@
 client_id = "3e56a9278d656e5b6e6de5d437653575"
 name = "checkout-ui-extension"
 handle = "checkout-ui-extension-156"
-application_url = "https://architectural-formerly-vii-gorgeous.trycloudflare.com"
+application_url = "https://editor-diamonds-pepper-ebooks.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "customer_read_customers,customer_write_customers,write_discounts,write
 
 [auth]
 redirect_urls = [
-  "https://architectural-formerly-vii-gorgeous.trycloudflare.com/auth/callback",
-  "https://architectural-formerly-vii-gorgeous.trycloudflare.com/auth/shopify/callback",
-  "https://architectural-formerly-vii-gorgeous.trycloudflare.com/api/auth/callback"
+  "https://editor-diamonds-pepper-ebooks.trycloudflare.com/auth/callback",
+  "https://editor-diamonds-pepper-ebooks.trycloudflare.com/auth/shopify/callback",
+  "https://editor-diamonds-pepper-ebooks.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
