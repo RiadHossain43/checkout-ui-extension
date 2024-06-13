@@ -3,18 +3,24 @@
 client_id = "3e56a9278d656e5b6e6de5d437653575"
 name = "checkout-ui-extension"
 handle = "checkout-ui-extension-156"
-application_url = "https://example.com/"
+application_url = "https://architectural-formerly-vii-gorgeous.trycloudflare.com"
 embedded = true
 
 [build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-38fec5d1.myshopify.com"
 include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "customer_read_customers,customer_write_customers,write_discounts,write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://architectural-formerly-vii-gorgeous.trycloudflare.com/auth/callback",
+  "https://architectural-formerly-vii-gorgeous.trycloudflare.com/auth/shopify/callback",
+  "https://architectural-formerly-vii-gorgeous.trycloudflare.com/api/auth/callback"
+]
 
 [webhooks]
 api_version = "2024-04"
