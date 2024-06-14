@@ -1,0 +1,1 @@
+(()=>{var t="WebPixel::Render";var r=e=>shopify.extend(t,e);r(({analytics:e,browser:i,init:s,settings:p})=>{e.subscribe("all_events",o=>{console.log("fired",o),o.type==="dom"&&o.data.element.id==="summary_apply_discount"&&console.log("tracking the apply discount clicks")})});})();
