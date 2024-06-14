@@ -13,7 +13,8 @@ export function run(input: RunInput): FunctionRunResult {
           {
             localizedMessage:
               "Not possible to order less than " +
-              String(toatalAmount) +
+              String(minimumCartCostLimit) +
+              " " +
               String(currencyCode),
             target: "cart",
           },

@@ -32,10 +32,10 @@ export function run(input: RunInput): FunctionRunResult {
         targets: targets,
         value: {
           percentage: {
-            value: 10,
+            value: 30,
           },
         },
-        message: "10% off",
+        message: "30% off",
       },
     ],
   };
