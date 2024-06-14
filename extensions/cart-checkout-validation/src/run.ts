@@ -3,16 +3,23 @@ import type {
   FunctionRunResult,
   FunctionError,
 } from "../generated/api";
-
+const minimumCartCostLimit = 800;
 export function run(input: RunInput): FunctionRunResult {
-  const errors: FunctionError[] = input.cart.lines
-    .filter(({ quantity }) => quantity > 1)
-    .map(() => ({
-      localizedMessage: "Not possible to order more than one of each",
-      target: "cart",
-    }));
-
+  const toatalAmount: number = input.cart.cost.totalAmount.amount;
+  const currencyCode: string = input.cart.cost.totalAmount.currencyCode;
+  const errors: FunctionError[] =
+    toatalAmount < minimumCartCostLimit
+      ? [
+          {
+            localizedMessage:
+              "Not possible to order less than " +
+              String(toatalAmount) +
+              String(currencyCode),
+            target: "cart",
+          },
+        ]
+      : [];
   return {
-    errors
-  }
-};
+    errors,
+  };
+}

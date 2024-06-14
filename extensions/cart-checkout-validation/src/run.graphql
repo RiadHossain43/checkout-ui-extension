@@ -1,7 +1,10 @@
 query RunInput {
-  cart {
-    lines {
-      quantity
+  cart{
+    cost{
+      totalAmount{
+        amount
+        currencyCode
+      }
     }
   }
 }
