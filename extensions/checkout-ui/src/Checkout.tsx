@@ -1,12 +1,6 @@
 import {
   Banner,
-  useApi,
-  useTranslate,
   reactExtension,
-  Button,
-  useCustomer,
-  Text,
-  useShippingAddress,
   useAppMetafields,
 } from "@shopify/ui-extensions-react/checkout";
 
@@ -15,15 +9,20 @@ export default reactExtension(
   () => <Extension />,
 );
 
+const allowDiscountFor = ["loyal", "vip"];
+
 function Extension() {
-  const translate = useTranslate();
-  const {
-    extension,
-  } = useApi();
-
-  const appmetaFields = useAppMetafields()
-
-  console.log(appmetaFields)
-
-  return <Banner title="Apply 'CODE_X' to get a 30% discount."></Banner>;
+  const appmetaFields = useAppMetafields({
+    type: "customer",
+  });
+  let customerMetaField = appmetaFields.find((item) => {
+    return (
+      item.metafield.namespace === "custom" &&
+      item.metafield.key === "customer_type"
+    );
+  });
+  let customerType: string = String(customerMetaField?.metafield?.value) || "";
+  if (allowDiscountFor.includes(customerType)) {
+    return <Banner title="Apply 'CODE_X' to get a 30% discount."></Banner>;
+  }
 }

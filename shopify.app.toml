@@ -3,7 +3,7 @@
 client_id = "3e56a9278d656e5b6e6de5d437653575"
 name = "checkout-ui-extension"
 handle = "checkout-ui-extension-156"
-application_url = "https://surf-bigger-data-businesses.trycloudflare.com"
+application_url = "https://caroline-focusing-length-paths.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "customer_read_customers,customer_write_customers,read_customer_events,
 
 [auth]
 redirect_urls = [
-  "https://surf-bigger-data-businesses.trycloudflare.com/auth/callback",
-  "https://surf-bigger-data-businesses.trycloudflare.com/auth/shopify/callback",
-  "https://surf-bigger-data-businesses.trycloudflare.com/api/auth/callback"
+  "https://caroline-focusing-length-paths.trycloudflare.com/auth/callback",
+  "https://caroline-focusing-length-paths.trycloudflare.com/auth/shopify/callback",
+  "https://caroline-focusing-length-paths.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
