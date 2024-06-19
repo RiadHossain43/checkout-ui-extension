@@ -19,9 +19,9 @@ type = "ui_extension"
 module = "./src/Checkout.tsx"
 target = "purchase.checkout.reductions.render-after"
 
-[[extensions.metafields]]
-namespace = "custom"
+[[extensions.targeting.metafields]]
 key = "customer_type"
+namespace = "custom"
 
 [extensions.capabilities]
 # Gives your extension access to directly query Shopify’s storefront API.
