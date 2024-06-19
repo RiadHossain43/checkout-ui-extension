@@ -39,6 +39,50 @@ shopify app deploy
 ```
 in the root and you are good to go.
 
+## The Discount code 
+
+Marchants need to create the `CODE_X` (can be any) discount code in their store. To create the discount code follwoing steps are helpfull 
+
+- Install the `Shopify GraphiQL App`. [Instructions](https://shopify.dev/docs/api/usage/api-exploration/storefront-graphiql-explorer)
+
+- Run follwing query and mutation. From the `query` get the discount function `id` of the discount and use it in the `mutation`.
+
+```graphql
+query {
+  shopifyFunctions(first: 25){
+  	nodes{ 
+    	id
+      app{
+        title
+      }
+      apiType
+      title
+    }
+  }
+}
+```
+
+Create the discount mutation.
+
+```graphql
+mutation{
+  discountCodeAppCreate(codeAppDiscount:{
+    code:"CODE_X",
+    title:"Task one discount function",
+    functionId:"the-function-id"
+    startsAt:"2023-10-01T00:00:00"
+  }){
+    codeAppDiscount{
+      discountId
+    }
+    userErrors{
+      field
+      message
+    }
+  }
+}
+```
+
 ## Additional Notes
 
 The web-pixel that is implemented in this app communicates to a remote server to store the discount click events in a database. The source code can be found in this repository [Here](https://github.com/RiadHossain43/prisma-node-express).
