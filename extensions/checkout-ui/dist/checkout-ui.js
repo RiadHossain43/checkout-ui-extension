@@ -19553,7 +19553,7 @@ ${errorInfo.componentStack}`);
     });
     let customerType = String((_a = customerMetaField == null ? void 0 : customerMetaField.metafield) == null ? void 0 : _a.value) || "";
     if (allowDiscountFor.includes(customerType)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Banner2, { title: "Apply 'CODE_X' to get a 30% discount." });
+      return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Banner2, { title: "Apply 'CODE_X' to get a 30% discount. Only available for our 'VIP' and 'Loyal' customers" });
     }
   }
 })();

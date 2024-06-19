@@ -23,6 +23,8 @@ function Extension() {
   });
   let customerType: string = String(customerMetaField?.metafield?.value) || "";
   if (allowDiscountFor.includes(customerType)) {
-    return <Banner title="Apply 'CODE_X' to get a 30% discount."></Banner>;
+    return (
+      <Banner title="Apply 'CODE_X' to get a 30% discount. Only available for our 'VIP' and 'Loyal' customers"></Banner>
+    );
   }
 }
