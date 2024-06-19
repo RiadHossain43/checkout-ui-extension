@@ -31,7 +31,7 @@ in the root of the project.
 Run 
 
 ```sh
-yarb deploy
+yarn deploy
 ```
 or
 ```sh
